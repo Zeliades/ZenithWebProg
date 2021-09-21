@@ -8,6 +8,8 @@
 
     $products = $person->getProductosUsuario($nombreUsuario);
 
+    $products[] = $nombreUsuario;
+
     if(!isset($_SESSION['personalProducts']))
         session_start();
 
