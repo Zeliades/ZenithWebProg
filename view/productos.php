@@ -21,7 +21,7 @@
         <div class="row sticky-top navbar">
             <div class="col-12">
                 <nav class="navbar navbar-expand-sm navbar-dark">
-                    <a href="index.html" class="navbar-brand"><u>Ingresar</u></a>
+                    <a href="login.html" class="navbar-brand"><u>Ingresar</u></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#items">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -61,7 +61,6 @@
                   </div>";
         } 
         echo "</div>";
-        session_destroy(); 
         ?>
 
     </div>

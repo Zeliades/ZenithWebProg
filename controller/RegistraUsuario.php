@@ -11,7 +11,7 @@
     if($usuario->RegistraUser($userName,$userPass,$userName))
     {
         echo "<script>alert('Usuario creado correctamente');</script>";
-        header("location:../index.html");
+        header("location:../view/login.html");
     }
     else
     {

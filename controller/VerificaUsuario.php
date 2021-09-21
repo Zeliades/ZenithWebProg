@@ -9,11 +9,13 @@
     
     if( empty($usuario->VerificaUser($userName, $userPass)) )
     {
-        header("location:../index.html");
+        echo "<script> alert('Usuario incorrecto'); </script>";
+        header("location:../view/login.html");
     }
     else
     {
-        header("location:../view/inicio.php");
+        //REDIRECCION TEMPORAL
+        header("location:../index.php");
     }
 
 ?>
