@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Zenith</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/iStyle.css">
+    <script src="js/verifica.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    
+    <div class="col-12">
+        <div class="fondoImagen">
+            <div class="textoImagen">
+                <h1 class="display-1" style="color: #F6F93F; font-weight: bold;">Zenith</h1>
+                <h2 style="color: #FBFD64; font-style: italic;">Productos a su alcance</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12 fondito">
+        <div>
+            <!--action temporal-->
+            <form action="controller/VerificaUsuario.php" method="post" class="w-50 text-center mt-2 py-3 formulario centerForm" onsubmit="validacionTexto()">
+                <h3>Ingresar</h3>
+                <label for="NombreU">Usuario: 
+                    <input type="text" id="NombreU" name="usuario" class="form-control texto" maxlength="25" required>
+                </label>
+                <label for="Pass">Contraseña: 
+                    <input type="password" id="Pass" name="contra" class="form-control texto" maxlength="15" required>
+                </label> <br>
+                
+                <input type="submit" value="Ingresar" class="btn bg-info mt-2" style="color: #fff;"> <!--Verificar datos de ingreso-->
+                <a href="view/creaCuenta.html" class="btn btn-info mt-2">Crear Cuenta</a> <!--CrearCuenta-->
+                
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<!--Extensiones js offline-->
+<script src="js/bootstrap/jquery-3.5.1.slim.min.js"></script>
+<script src="js/bootstrap/popper.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+</body>
+</html>

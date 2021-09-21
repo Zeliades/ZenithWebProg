@@ -1,0 +1,22 @@
+/*-------------------------------Cabecera----------------------------*/
+.cabecera{
+    background-image: url('../img/Feria.jpg');
+    
+}
+
+/*--------------------------------Fondo-------------------------------*/
+.navbar{
+    background: linear-gradient(to right, rgb(9, 35, 114), rgba(3, 11, 36, 0.9));
+
+}
+
+.back
+{
+    background-color: #F7FC72;
+}
+
+.bg-warning
+{
+    background-color:  #F7FC72;
+}
+
