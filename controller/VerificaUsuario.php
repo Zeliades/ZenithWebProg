@@ -14,8 +14,7 @@
     }
     else
     {
-        //REDIRECCION TEMPORAL
-        header("location:../index.php");
+        header("location:ProductosUsuario.php?user=$userName");
     }
 
 ?>
