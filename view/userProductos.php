@@ -1,6 +1,19 @@
 <?php
     session_start();
-    $prodUsuRecibidos = $_SESSION['personalProducts'];
+    $nombreUsu = $_SESSION['userName'];
+
+$ch = curl_init();
+
+    $url = "localhost/proyectoWebII/controller/api/apiGet.php?usu=$nombreUsu";
+    
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $resp = curl_exec($ch);
+
+    $prodUsuRecibidos = json_decode($resp, true);
+    
+curl_close($ch);
 ?>
 <!DOCTYPE html>
 <head>
@@ -29,7 +42,7 @@
                 <div class='card-header text-center bg-warning'>
                     <p class='display-4'>" . $prodUsuRecibidos[$i]['Nombre'] . "</p>
                 </div>
-                <img src='data:image/jpeg; base64," . base64_encode($prodUsuRecibidos[$i]['ImgProducto']) . "' class='img-fluid img-thumbnail'>
+                <img src='../img/products/" . $prodUsuRecibidos[$i]['ImgProducto'] . "' class='img-fluid img-thumbnail'>
                 <div class='card-body' style='background: #69F6E4'>
                     <h4 class='card-title'>" . $prodUsuRecibidos[$i]['Nombre'] . "</h4>
                     <article class='card-text'>

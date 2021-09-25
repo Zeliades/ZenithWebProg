@@ -14,7 +14,12 @@
     }
     else
     {
-        header("location:ProductosUsuario.php?user=$userName");
+        if(!isset($_SESSION['userName']))
+            session_start();
+
+        $_SESSION['userName'] = $userName;
+        
+        header("location:../view/userProductos.php");
     }
 
 ?>
