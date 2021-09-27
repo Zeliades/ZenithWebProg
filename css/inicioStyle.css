@@ -20,3 +20,25 @@
     background-color:  #F7FC72;
 }
 
+/*-------------------------------Estilos CRUD--------------------------*/
+.imgCrud
+{
+    max-width: 80%;
+    max-height: auto;
+}
+
+.botonazo
+{
+    background-color: rgb(62,68,74);
+    color: rgb(247,247,248);
+    font-size: 1em;
+    padding: 0.25em;
+    margin-bottom: 0.2em;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.botonazo:hover
+{
+    background-color: rgb(72,78,84);
+}

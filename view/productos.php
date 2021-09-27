@@ -45,7 +45,9 @@
                     <div class='card-header text-center bg-warning'>
                         <p class='display-4'>" . $prod['Nombre'] . "</p>
                     </div>
-                    <img src='data:image/jpeg; base64," . base64_encode($prod['ImgProducto']) . "' class='img-fluid img-thumbnail'>
+                    <div class='text-center'>
+                        <img src='../img/products/" . $prod['ImgProducto'] . "' class='img-fluid img-thumbnail'>
+                    </div>
                     <div class='card-body' style='background: #69F6E4'>
                         <h4 class='card-title'>" . $prod['Nombre'] . "</h4>
                         <article class='card-text'>

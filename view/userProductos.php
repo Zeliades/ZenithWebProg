@@ -31,35 +31,75 @@ curl_close($ch);
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <h2 class="display-4 text-center">Bienvenido a su pagina personal: <?php echo $prodUsuRecibidos[count($prodUsuRecibidos)-1]?></h2>
+        <div class="col-12 text-center">
+            <h2 class="display-4">Articulos personales de <?php echo $prodUsuRecibidos[count($prodUsuRecibidos)-1]?></h2>
         </div>
     </div>
-    <?php 
-    echo "<div class='row'>";
+
+    <div class="row no-gutters bg-success text-center text-dark mx-2">
+        <div class="col-2 border border-dark">
+            Nombre
+        </div>
+        <div class="col-2 border border-dark">
+            Descripcion
+        </div>
+        <div class="col-1 border border-dark">
+            Precio
+        </div>        
+        <div class="col-1 border border-dark">
+            Ciudad
+        </div>
+        <div class="col-2 border border-dark">
+            Calle
+        </div>
+        <div class="col-1 border border-dark">
+            Dispon
+        </div>
+        <div class="col-2 border border-dark">
+            Imagen
+        </div>
+        <div class="col-1 border border-dark">
+            Accion
+        </div>
+    </div>
+
+    <?php
     for( $i=0; $i<count($prodUsuRecibidos)-1; $i++ ){
-        echo "<div class='col-12 col-md-6 col-lg-4 mt-2'>
-                <div class='card-header text-center bg-warning'>
-                    <p class='display-4'>" . $prodUsuRecibidos[$i]['Nombre'] . "</p>
-                </div>
-                <img src='../img/products/" . $prodUsuRecibidos[$i]['ImgProducto'] . "' class='img-fluid img-thumbnail'>
-                <div class='card-body' style='background: #69F6E4'>
-                    <h4 class='card-title'>" . $prodUsuRecibidos[$i]['Nombre'] . "</h4>
-                    <article class='card-text'>
-                        <p class='card-text'>Descrpcion: " . $prodUsuRecibidos[$i]['Descripcion'] . "</p>
-                        <p class='card-text'>Disponible: " . $prodUsuRecibidos[$i]['Disponible'] . "</p>
-                        <p class='card-text'>Direccion: " . $prodUsuRecibidos[$i]['Ciudad'] . " " . $prodUsuRecibidos[$i]['calle'] . "</p>
-                    </article>
-                </div>
-
-                <div class='card-footer bg-info text-center'>
-                    <p><h2>" . $prodUsuRecibidos[$i]['Precio'] . "Bs.</h2></p>
-                </div>
+      $color = ($i%2==0)? "bg-secondary" : "bg-info";  
+      echo "<div class='row no-gutters align-items-center $color py-1 mx-2'>";
+        echo "<div class='col-2 text-light'>". 
+                  $prodUsuRecibidos[$i]['Nombre']."
+              </div>
+              <div class='col-2 text-light'>".
+                  $prodUsuRecibidos[$i]['Descripcion']."
+              </div>
+              <div class='col-1 text-light text-center'>".
+                  $prodUsuRecibidos[$i]['Precio']."
+              </div>        
+              <div class='col-1 text-light text-center'>".
+                  $prodUsuRecibidos[$i]['Ciudad']."
+              </div>
+              <div class='col-2 text-light text-center'>".
+                  $prodUsuRecibidos[$i]['calle']."
+              </div>
+              <div class='col-1 text-light text-center'>".
+                  $prodUsuRecibidos[$i]['Disponible']."
+              </div>
+              <div class='col-2 text-light text-center'>
+                  <img src='../img/products/" . $prodUsuRecibidos[$i]['ImgProducto'] . "' class='imgCrud'>
+              </div>
+              <div class='col-1 text-light text-center'>
+                  <button class='botonazo'>Editar</button>
+                  <button class='botonazo'>Borrar</button>
               </div>";
+      echo "</div>";
     }
-
-    echo "</div>";
-?>
+    ?>
+    <div class="row bg-dark mt-2 py-4">
+        <div class="col-12">
+            <h2 class="display-4 text-center">Este es un footer</h2>
+        </div>
+    </div>
 </div>
 <!--Extensiones js offline-->
 <script src="../js/bootstrap/jquery-3.5.1.slim.min.js"></script>
