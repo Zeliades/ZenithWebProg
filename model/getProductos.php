@@ -8,12 +8,12 @@
             parent::set_names();
 
             $query = "SELECT productos.Nombre, productos.Precio, productos.Disponible, productos.Descripcion, 
-                      ubicaciones.Ciudad, ubicaciones.calle, productos.ImgProducto FROM ubicaciones
-                      INNER JOIN comprod 
-                      ON ubicaciones.IdCom = comprod.IdCom
-                      INNER JOIN productos
-                      ON comprod.CodArt = productos.CodArt
-                      WHERE productos.Categoria='$IdProd'";
+                             ubicaciones.Ciudad, ubicaciones.calle, productos.ImgProducto FROM ubicaciones
+                             INNER JOIN comprod 
+                             ON ubicaciones.IdUsu = comprod.IdUsu
+                             INNER JOIN productos
+                             ON comprod.CodArt = productos.CodArt
+                             WHERE productos.Categoria='$IdProd'";
 
             $sentencia=$conecta->prepare($query);
             $sentencia->execute(array());
@@ -33,13 +33,11 @@
             $query = "SELECT productos.Nombre, productos.Precio, productos.Disponible, productos.Descripcion, 
                              ubicaciones.Ciudad, ubicaciones.calle, productos.ImgProducto FROM ubicaciones
                              INNER JOIN comprod 
-                             ON ubicaciones.IdCom = comprod.IdCom
+                             ON ubicaciones.IdUsu = comprod.IdUsu
                              INNER JOIN productos
                              ON comprod.CodArt = productos.CodArt
-                             INNER JOIN comerciantes
-                             ON comprod.IdCom = comerciantes.IdCom
                              INNER JOIN usuarios
-                             ON comerciantes.Usuario = usuarios.Id
+                             ON comprod.IdUsu = usuarios.Id
                              WHERE usuarios.NombreU = '$user'";
 
             $sentencia=$conecta->prepare($query);
