@@ -30,8 +30,9 @@
             $conecta = parent::Conexion();
             parent::set_names();
 
-            $query = "SELECT productos.Nombre, productos.Precio, productos.Disponible, productos.Descripcion, 
-                             ubicaciones.Ciudad, ubicaciones.calle, productos.ImgProducto FROM ubicaciones
+            $query = "SELECT productos.CodArt, productos.Nombre, productos.Precio, productos.Disponible, 
+                             productos.Descripcion,ubicaciones.Ciudad, ubicaciones.calle, 
+                             productos.ImgProducto FROM ubicaciones
                              INNER JOIN comprod 
                              ON ubicaciones.IdUsu = comprod.IdUsu
                              INNER JOIN productos

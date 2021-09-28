@@ -6,7 +6,7 @@
             $conecta = parent::conexion();
             parent::set_names();
 
-            $query = "SELECT NombreU, Pass FROM usuarios WHERE NombreU = '$name' AND Pass = '$pass'";
+            $query = "SELECT Id, NombreU, Pass FROM usuarios WHERE NombreU = '$name' AND Pass = '$pass'";
 
             $sentencia=$conecta->prepare($query);
             $sentencia->execute(array());

@@ -4,7 +4,7 @@
 
 $ch = curl_init();
 
-    $url = "localhost/proyectoWebII/controller/api/apiGet.php?usu=$nombreUsu";
+    $url = "localhost/proyectoWebII/controller/api/apiGet.php?usu=".$nombreUsu['usuNom'];
     
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

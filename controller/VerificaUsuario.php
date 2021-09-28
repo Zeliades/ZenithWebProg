@@ -6,8 +6,10 @@
     $userPass = $_POST['contra'];
 
     $usuario = new Usuarios();
+    $userData = $usuario->VerificaUser($userName, $userPass);
+
     
-    if( empty($usuario->VerificaUser($userName, $userPass)) )
+    if( empty($userData) )
     {
         echo "<script> alert('Usuario incorrecto'); </script>";
         header("location:../view/login.html");
@@ -17,7 +19,7 @@
         if(!isset($_SESSION['userName']))
             session_start();
 
-        $_SESSION['userName'] = $userName;
+        $_SESSION['userName'] = ["usuNom" => $userName, "usuId" => $userData['Id']];
         
         header("location:../view/userProductos.php");
     }
