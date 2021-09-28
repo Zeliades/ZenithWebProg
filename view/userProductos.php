@@ -89,8 +89,10 @@ curl_close($ch);
                   <img src='../img/products/" . $prodUsuRecibidos[$i]['ImgProducto'] . "' class='imgCrud'>
               </div>
               <div class='col-1 text-light text-center'>
+                  <button class='botonazo'>
+                  <a href='../controller/BorrarProducto.php?idUsua=".$nombreUsu['usuId']."&idProdu=".$prodUsuRecibidos[$i]['CodArt']."'>Borrar</a>
+                  </button>
                   <button class='botonazo'>Editar</button>
-                  <button class='botonazo'>Borrar</button>
               </div>";
       echo "</div>";
     }

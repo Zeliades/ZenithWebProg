@@ -51,25 +51,60 @@
             return $resultado;
         }
 
+        public function delProducto($idProd, $idUser)
+        {
+            $resultado = true;
+
+            try {
+                $conecta = parent::Conexion();
+                parent::set_names();
+
+                $query = "DELETE FROM comprod WHERE IdUsu=$idUser AND CodArt='$idProd'";
+
+                $sentencia=$conecta->prepare($query);
+                $sentencia->execute();
+
+                $sentencia->closeCursor();
+
+                $this->borraImagen($idProd);
+
+                $query = "DELETE FROM productos WHERE CodArt='$idProd'";
+
+                $sentencia=$conecta->prepare($query);
+                $sentencia->execute();
+
+                $sentencia->closeCursor();
+
+                $conecta = null;
+            } 
+            catch (Exception $e) {
+                $resultado = false;
+            }
+
+            return $resultado;
+        }
+
+        private function borraImagen($idProd)
+        {
+            $conecta = parent::Conexion();
+            parent::set_names();
+
+            $query = "SELECT ImgProducto FROM productos WHERE CodArt='$idProd'";
+
+            $sentencia=$conecta->prepare($query);
+            $sentencia->execute(array());
+            $resultado=$sentencia->fetch(PDO::FETCH_ASSOC);
+            $sentencia->closeCursor();
+
+            $conecta = null;
+
+            $direccion = dirname(__DIR__) . "\img\products\\". $resultado['ImgProducto'];
+
+            unlink($direccion);
+        }
     }
 
 
-    //Consulta para productos segun usuario
-    /*
-    enviar datos a pagina personal para mostrar productos personales y editarlos
-
-    SELECT productos.Nombre, productos.Precio, productos.Disponible, productos.Descripcion, 
-                      ubicaciones.Ciudad, ubicaciones.calle, productos.ImgProducto FROM ubicaciones
-                      INNER JOIN comprod 
-                      ON ubicaciones.IdCom = comprod.IdCom
-                      INNER JOIN productos
-                      ON comprod.CodArt = productos.CodArt
-                      INNER JOIN comerciantes
-                      ON comprod.IdCom = comerciantes.IdCom
-                      INNER JOIN usuarios
-                      ON comerciantes.Usuario = usuarios.Id
-                      WHERE usuarios.NombreU = 'Maria';
-
-    */
+    
 
 ?>
