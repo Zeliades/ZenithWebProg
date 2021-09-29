@@ -90,9 +90,13 @@ curl_close($ch);
               </div>
               <div class='col-1 text-light text-center'>
                   <button class='botonazo'>
-                  <a href='../controller/BorrarProducto.php?idUsua=".$nombreUsu['usuId']."&idProdu=".$prodUsuRecibidos[$i]['CodArt']."'>Borrar</a>
+                    <a href='../controller/BorrarProducto.php?idUsua=".$nombreUsu['usuId']."&idProdu=".$prodUsuRecibidos[$i]['CodArt']."'>Borrar</a>
                   </button>
-                  <button class='botonazo'>Editar</button>
+                  <button class='botonazo'>
+                    <a href='subir.php?PROD=".$prodUsuRecibidos[$i]['CodArt']."&USUA=".$nombreUsu['usuId']."&nomb=".$prodUsuRecibidos[$i]['Nombre']."&desc=".$prodUsuRecibidos[$i]['Descripcion']."&prec=".$prodUsuRecibidos[$i]['Precio']."&ciud=".$prodUsuRecibidos[$i]['Ciudad']."&call=".$prodUsuRecibidos[$i]['calle']."&disp=".$prodUsuRecibidos[$i]['Disponible']."'>
+                    Editar
+                    </a>
+                  </button>
               </div>";
       echo "</div>";
     }
