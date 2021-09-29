@@ -102,6 +102,64 @@
 
             unlink($direccion);
         }
+
+        public function updateProducto($idUsu,$idProd,$nom,$pre,$dis,$des,$ciu,$cal)
+        {
+            $conecta = parent::Conexion();
+            parent::set_names();
+
+            $query = "UPDATE productos SET 
+                        Nombre='$nom',
+                        Precio=$pre,
+                        Disponible='$dis',
+                        Descripcion='$des'
+                      WHERE CodArt='$idProd'";
+
+            $sentencia=$conecta->prepare($query);
+            $sentencia->execute();
+
+            $sentencia->closeCursor();
+
+            $this->updateUbicacion($idUsu,$ciu,$cal);
+
+            $conecta = null;
+        }
+
+        private function updateUbicacion($idUsu, $ciu, $cal)
+        {
+            $conecta = parent::Conexion();
+            parent::set_names();
+
+            $query = "UPDATE ubicaciones SET
+                        ciudad='$ciu',
+                        calle='$cal'
+                      WHERE IdUsu='$idUsu'";
+            
+            $sentencia=$conecta->prepare($query);
+            $sentencia->execute();
+
+            $sentencia->closeCursor();
+
+            $conecta = null;
+        }
+
+        public function updateImagen($idProd, $imgName)
+        {
+            $this->borraImagen($idProd);
+
+            $conecta = parent::Conexion();
+            parent::set_names();
+
+            $query = "UPDATE productos SET ImgProducto='$imgName'
+                      WHERE CodArt='$idProd'";
+
+            $sentencia=$conecta->prepare($query);
+            $sentencia->execute();
+
+            $sentencia->closeCursor();
+
+            $conecta = null;
+        }
     }
 
 

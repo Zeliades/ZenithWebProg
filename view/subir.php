@@ -29,14 +29,16 @@
     <!--Formulario culero-->
     <div class="row">
         <div class="col-12 text-center">
-            <form action="../controller/ActualizaProducto.php" method="post">
+            <form action='../controller/ActualizaProducto.php' method="post" enctype="multipart/form-data" >
                 <input type="text" name="nom" value="<?php echo $prodNombre;?>">
                 <input type="text" name="des" value="<?php echo $prodDesc;?>">
                 <input type="text" name="pre" value="<?php echo $prodPrec;?>">
                 <input type="text" name="ciu" value="<?php echo $prodCiud;?>">
                 <input type="text" name="cal" value="<?php echo $prodCall;?>">
                 <input type="text" name="dis" value="<?php echo $prodDispon;?>">
-                <input type="file" name="img" accept="image/*">
+                <input type="hidden" name="idUsu" value="<?php echo $idUsu;?>">
+                <input type="hidden" name="idProd" value="<?php echo $idProd;?>">
+                <input type="file" name="patata" id="patata" accept="image/png,image/jpg,image/jpeg">
                 <input type="submit" value="Apashurrale">
             </form>
         </div>
