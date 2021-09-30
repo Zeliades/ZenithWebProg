@@ -16,6 +16,26 @@
     $prodCiud = $_POST['ciu'];
     $prodCall = $_POST['cal'];
     
+    switch($prodCat)
+    {
+        case "Ves":
+            $prodCat = "V100";
+        break;
+        case "Tec":
+            $prodCat = "T200";
+        break;
+        case "Hog":
+            $prodCat = "H300";
+        break;
+        case "Coc":
+            $prodCat = "C400";
+        break;
+        case "Dep":
+            $prodCat = "D500";
+        break;
+    }
+
+
     //Subir Registro nuevo
     $registrado = $producto->insertProducto($idUsu,$prodNombre,$prodDesc,$prodPrec,$prodCat,$prodCiud,$prodCall);
 

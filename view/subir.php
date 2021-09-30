@@ -26,24 +26,55 @@
         </div>
     </div>
 
-    <!--Formulario culero-->
-    <div class="row">
+    <div class="row formulario">
         <div class="col-12 text-center">
             <form action='../controller/ActualizaProducto.php' method="post" enctype="multipart/form-data" >
-                <input type="text" name="nom" value="<?php echo $prodNombre;?>">
-                <input type="text" name="des" value="<?php echo $prodDesc;?>">
-                <input type="text" name="pre" value="<?php echo $prodPrec;?>">
-                <input type="text" name="ciu" value="<?php echo $prodCiud;?>">
-                <input type="text" name="cal" value="<?php echo $prodCall;?>">
-                <input type="text" name="dis" value="<?php echo $prodDispon;?>">
-                <input type="hidden" name="idUsu" value="<?php echo $idUsu;?>">
-                <input type="hidden" name="idProd" value="<?php echo $idProd;?>">
-                <input type="file" name="patata" id="patata" accept="image/png,image/jpg,image/jpeg">
-                <input type="submit" value="Apashurrale">
+                <div class="col-12">
+                    <label for="nom">Nombre del producto</label><br>
+                    <input type="text" name="nom" id="nom" value="<?php echo $prodNombre;?>">
+                </div>
+                <div class="col-12">
+                    <label for="des">Descripcion del producto</label><br>
+                    <input type="text" name="des" id="des" value="<?php echo $prodDesc;?>">
+                </div>
+                <div class="col-12">
+                    <label for="pre">Precio</label><br>
+                    <input type="text" name="pre" id="pre" value="<?php echo $prodPrec;?>">
+                </div>
+                <div class="col-12">
+                    <label for="ciu">Ciudad</label><br>
+                    <input type="text" name="ciu" id="ciu" value="<?php echo $prodCiud;?>">
+                </div>
+                <div class="col-12">
+                    <label for="cal">Calle</label><br>
+                    <input type="text" name="cal" id="cal" value="<?php echo $prodCall;?>">
+                </div>
+                <div class="col-12">
+                    <label for="dis">Disponible (si/no)</label><br>
+                    <input type="text" name="dis" id="dis" value="<?php echo $prodDispon;?>">
+                </div>
+                <div class="col-12">
+                    <input type="hidden" name="idUsu" value="<?php echo $idUsu;?>">
+                </div>
+                <div class="col-12">
+                    <input type="hidden" name="idProd" value="<?php echo $idProd;?>">
+                </div>
+                <div class="col-12">
+                    <label for="patata">Imagen del producto</label><br>
+                    <input type="file" name="patata" id="patata" accept="image/png,image/jpg,image/jpeg">
+                </div>
+                <div class="col-12">
+                    <input type="submit" value="Apashurrale">
+                </div>
             </form>
         </div>
     </div>
-    <!--Fin del formulario culero-->
+    
+    <div class="row bg-dark mt-2 py-4">
+        <div class="col-12">
+            <h2 class="display-4 text-center">Productos a su alcance</h2>
+        </div>
+    </div>
 </div>
 </body>
 </html>

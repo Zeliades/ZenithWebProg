@@ -20,7 +20,6 @@
         </div>
     </div>
 
-    <!--Formulario culero-->
     <div class="row">
         <div class="col-12 text-center">
             <form action='../controller/IngresaProducto.php?idUsu=<?php echo $nombreUsu['usuId'];?>' method="post" enctype="multipart/form-data" >
@@ -41,7 +40,11 @@
             </form>
         </div>
     </div>
-    <!--Fin del formulario culero-->
+    <div class="row bg-dark mt-2 py-4">
+        <div class="col-12">
+            <h2 class="display-4 text-center">Productos a su alcance</h2>
+        </div>
+    </div>
 </div>
 </body>
 </html>

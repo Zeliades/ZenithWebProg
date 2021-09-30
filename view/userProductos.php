@@ -113,7 +113,7 @@ curl_close($ch);
     ?>
     <div class="row bg-dark mt-2 py-4">
         <div class="col-12">
-            <h2 class="display-4 text-center">Este es un footer</h2>
+            <h2 class="display-4 text-center">Productos a su alcance</h2>
         </div>
     </div>
 </div>
