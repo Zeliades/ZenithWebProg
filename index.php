@@ -34,24 +34,19 @@
             </div>
         </div>
 
-        <div class='col-12 col-md-6 col-lg-4 mt-2'>
-            <div class='card-header text-center bg-warning'>
-                <p class='display-4'>HP Pavillion</p>
+        <div class="row align-items-center justify-content-center pt-4 pb-3">
+            <div class='col-10 col-md-5 col-lg-5'>
+                <img src="img/landing.jpg" class="img-fluid img-thumbnail">
             </div>
-            <img src='img/pavillion.jpg' class='img-fluid img-thumbnail'>
-            <div class='card-body' style='background: #69F6E4'>
-                <h4 class='card-title'>HP Pavillion</h4>
-                <article class='card-text'>
-                    <p class='card-text'>Descrpcion: 15 in i7 12Ram 1TB Rigido Win 11</p>
-                    <p class='card-text'>Disponible: Si</p>
-                    <p class='card-text'>Direccion: La Paz Eloy Salmon 4324</p>
-                </article>
-            </div>
-            
-            <div class='card-footer bg-info text-center'>
-                <p><h2>Bs.6500</h2></p>
+            <div class='col-10 col-md-5 col-lg-5'>
+                <p class="text-justify fuente">Zenith es un sitio con el fin de proporcionar a los usuarios un 
+                   sitio agradable y adecuado para facilitar la divulgacion
+                   de una amplia gamma de productos ofrecidos por los mismos
+                   usuarios de la pagina y estos mismos productos sean mostrados
+                   para el publico en general.</p>
             </div>
         </div>
+
         <div class="row bg-dark mt-2 py-4">
             <div class="col-12">
                 <h2 class="display-4 text-center">Productos a su alcance</h2>
