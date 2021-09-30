@@ -7,6 +7,8 @@
    junto a un software capaz de importar bases de datos mysql 
    (ej. phpmyadmin mysql workbench)
 
+   Un Editor de texto (bloc de notas, notepad++, atom, Visual Studio Code)
+
 2. Colocar el proyecto dentro de localhost
 
     Dentro de la carpeta donde esta ubicado su localhost, colocar
