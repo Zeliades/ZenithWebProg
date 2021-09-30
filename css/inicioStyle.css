@@ -46,10 +46,11 @@
 /*------------------------------Formularios---------------------------*/
 
 .alinea{
-    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+    margin-left: 36.75%;
 }
 
 .formulario{
-    padding: 1em;
-    background-color: blue;
+    border-radius: 0.6em;
 }

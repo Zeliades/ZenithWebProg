@@ -52,6 +52,11 @@
                 <p><h2>Bs.6500</h2></p>
             </div>
         </div>
+        <div class="row bg-dark mt-2 py-4">
+            <div class="col-12">
+                <h2 class="display-4 text-center">Productos a su alcance</h2>
+            </div>
+        </div>
     </div>
 <!--Extensiones js offline-->
 <script src="js/bootstrap/jquery-3.5.1.slim.min.js"></script>
