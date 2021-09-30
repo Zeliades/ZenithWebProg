@@ -35,6 +35,16 @@ curl_close($ch);
             <h2 class="display-4">Articulos personales de <?php echo $prodUsuRecibidos[count($prodUsuRecibidos)-1]?></h2>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <button class='botonazo'>
+                <a href='ingresa.php'>Agregar Nuevo Producto</a>
+            </button>
+            <button class='botonazo'>
+                <a href='../index.php'>Volver a Home</a>
+            </button>
+        </div>
+    </div>
 
     <div class="row no-gutters bg-success text-center text-dark mx-2">
         <div class="col-2 border border-dark">
